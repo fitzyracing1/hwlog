@@ -1,0 +1,15 @@
+# hwlog
+
+hwlog is an append-only hardware prototype log.
+Extension: .hwlog
+Banner: # hwlog v1
+Frontmatter must include PROJECT.
+Body is ENTRY blocks with KEY: value lines.
+Allowed keys: STATUS PROGRESS PART BOM SOURCE BLOCKER NEXT NOTE RIG SEQ
+STATUS enum: Concept Design Prototyping Testing Production Ready Complete On Hold
+PROGRESS is 0-100.
+Append only. Never rewrite a prior ENTRY.
+Declared format only. Not an OS MIME type.
+Declaration: assets/hwlog.kind
+Sample: examples/sample.hwlog
+Machine pack: ai-discovery/pack.json

@@ -1,0 +1,25 @@
+{
+  "pack": "ai-discovery",
+  "name": "hwlog",
+  "kind": "hwlog",
+  "ext": ".hwlog",
+  "version": 1,
+  "mime": "application/x-hwlog",
+  "banner": "# hwlog v1",
+  "binary": false,
+  "repo": "https://github.com/fitzyracing1/hwlog",
+  "pages": "https://fitzyracing1.github.io/hwlog/",
+  "declaration": "assets/hwlog.kind",
+  "sample": "examples/sample.hwlog",
+  "agents": "ai-discovery/AGENTS.md",
+  "llms": "ai-discovery/llms.txt",
+  "skill": "ai-discovery/SKILL.md",
+  "triggers": ["hwlog", "hardware log", ".hwlog", "BOM", "prototype log"],
+  "parse": {
+    "line1": "# hwlog v1",
+    "required_frontmatter": ["PROJECT"],
+    "entry": "ENTRY: <int>",
+    "keys": ["STATUS", "PROGRESS", "PART", "BOM", "SOURCE", "BLOCKER", "NEXT", "NOTE", "RIG", "SEQ"],
+    "status": ["Concept", "Design", "Prototyping", "Testing", "Production Ready", "Complete", "On Hold"]
+  }
+}

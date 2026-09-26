@@ -2,13 +2,11 @@
 
 Custom hardware log file type `.hwlog`.
 
-**Repo:** https://github.com/fitzyracing1/hwlog
+**Repo:** https://github.com/fitzyracing1/hwlog  
+**Pages:** https://fitzyracing1.github.io/hwlog/  
+**AI discovery pack:** https://fitzyracing1.github.io/hwlog/ai-discovery/
 
-Append-only prototype log. One ENTRY block per update. Phone dictation maps onto STATUS, PROGRESS, PART, BOM, BLOCKER, NEXT.
-
-This is a declared format, not an OS MIME install.
-
-Sibling type: [keepn](https://github.com/fitzyracing1/keepn)
+Declared format. Not an OS MIME install.
 
 ## Banner
 
@@ -41,14 +39,19 @@ NEXT: dry-fit panel A to rail
 - PROGRESS is 0-100
 - Allowed keys: STATUS, PROGRESS, PART, BOM, SOURCE, BLOCKER, NEXT, NOTE, RIG, SEQ
 
-## Validate the declaration
+## Pages
+
+Site source is `docs/`. If the live URL 404s, enable Pages once:
+
+GitHub repo → Settings → Pages → Source: GitHub Actions
+
+## AI discovery pack
+
+- `ai-discovery/pack.json`
+- `ai-discovery/llms.txt`
+- `ai-discovery/AGENTS.md`
+- `ai-discovery/SKILL.md`
 
 ```bash
 python3 scripts/validate-kind.py assets/hwlog.kind
 ```
-
-## Layout
-
-- `assets/hwlog.kind` — type declaration
-- `examples/sample.hwlog` — valid sample
-- `scripts/validate-kind.py` — declaration validator
